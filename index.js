@@ -54,9 +54,9 @@ console.log('-----ปริ้นทั้งหมด-----' + JSON.stringify(da
      if (req.body.events[0].beacon.type == "enter") {   
         
      var beacon_id = req.body.events[0].beacon.hwid  
-       //  if(beacon_1 == "0165a26b7a1"){
+       //  if(beacon_1 == "0165a26b7a"){
        //  profile(reToken, sende_r);    
-       //  }else if(beacon_1 == "0165a32e111"){
+       //  }else if(beacon_1 == "0165a32e11"){
        //  profile(reToken, sende_r);    
        //  } 
        profile(reToken, sende_r, beacon_id);  
