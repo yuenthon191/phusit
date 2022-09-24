@@ -54,9 +54,9 @@ console.log('-----ปริ้นทั้งหมด-----' + JSON.stringify(da
      if (req.body.events[0].beacon.type == "enter") {   
         
      var beacon_id = req.body.events[0].beacon.hwid  
-       //  if(beacon_1 == "0133a0751f"){
+       //  if(beacon_1 == "0165a26b7a"){
        //  profile(reToken, sende_r);    
-       //  }else if(beacon_1 == "0133a0751f"){
+       //  }else if(beacon_1 == "0165a32e11"){
        //  profile(reToken, sende_r);    
        //  } 
        profile(reToken, sende_r, beacon_id);  
@@ -75,7 +75,7 @@ console.log('-----ปริ้นทั้งหมด-----' + JSON.stringify(da
 function data_enter(sende_r, beacon_id) {
 
 
-   var checktime = "https://script.google.com/macros/s/AKfycbyqcGR2ZNw4m8SgH6krihGVa1stW3BsY9vPLJWN/exec?userId="+sende_r+"&beaconid="+beacon_id;
+   var checktime = "https://script.google.com/macros/s/AKfycbyOj2ItiR1XpN24JiCRnsaDN-zIfRbvS7AGcHKzbFVWVJmt1Aw/exec?userId="+sende_r+"&beaconid="+beacon_id;
  request(checktime, function (error, response, body) {
 
 })
@@ -108,17 +108,17 @@ var options = {
         var info = JSON.parse(body);
         name = info.displayName;
         
-          if(beacon_id == "0140de7594"){
+          if(beacon_id == "0165a26b7a"){
          var msg = {
            "type": "text",
-           "text": "ระบบได้บันทึกการตรวจจุดตรวจสำนักงานขาย/นิติบุคคล ของ"+" " +name +" " + "ไว้เรียบร้อยแล้ว"
+           "text": "ระบบได้บันทึกการตรวจจุดตรวจ 170/38 ของ"+" " +name +" " + "ไว้เรียบร้อยแล้ว"
 
           }; 
         reply(reToken, msg, sende_r, beacon_id);    
-         }else if(beacon_id == "014fe40247"){
+         }else if(beacon_id == "0165a32e11"){
          var msg = {
            "type": "text",
-           "text": "ระบบได้บันทึกการตรวจจุดตรวจโครงการหมู่บ้าน"+" " +name +" " + "ไว้เรียบร้อยแล้ว"
+           "text": "ระบบได้บันทึกการตรวจจุดตรวจ 170/48"+" " +name +" " + "ไว้เรียบร้อยแล้ว"
           }; 
         reply(reToken, msg, sende_r, beacon_id);   
          }
